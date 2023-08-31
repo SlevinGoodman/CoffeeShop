@@ -1,10 +1,7 @@
 // базовые подключения
-@import "fonts";
+@import "./mixins/fonts";
 @import "vars";
-@import "mixins";
-//@import "vendor";
-//@import "settings";
-
-// подключения компонентов страницы для GULP
-// @import "./components/header";
-
+@import "mixins/flex";
+// подключения компонентов страницы
+@import "./components/global";
+@import "./components/header";

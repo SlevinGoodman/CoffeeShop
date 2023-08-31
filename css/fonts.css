@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-style: normal;
+    src: local("Righteous"),
+        url("../resources/fonts/Righteous-Regular.woff2") format('woff2'),
+        url("../resources/fonts/Righteous-Regular.woff") format('woff'),
+        url("../resources/fonts/Righteous-Regular.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: normal;
+    src: local("Inter"),
+        url("../resources/fonts/Inter-Regular.woff2") format('woff2'),
+        url("../resources/fonts/Inter-Regular.woff") format('woff'),
+        url("../resources/fonts/Inter-Regular.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-style: normal;
+    src: local("Inter"),
+        url("../resources/fonts/Inter-Bold.woff2") format('woff2'),
+        url("../resources/fonts/Inter-Bold.woff") format('woff'),
+        url("../resources/fonts/Inter-Bold.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Urbanist';
+    font-weight: 500;
+    font-style: normal;
+    src: local("Urbanist"),
+        url("../resources/fonts/Urbanist-Medium.woff2") format('woff2'),
+        url("../resources/fonts/Urbanist-Medium.woff") format('woff'),
+        url("../resources/fonts/Urbanist-Medium.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Urbanist';
+    font-weight: 600;
+    font-style: normal;
+    src: local("Urbanist"),
+        url("../resources/fonts/Urbanist-SemiBold.woff2") format('woff2'),
+        url("../resources/fonts/Urbanist-SemiBold.woff") format('woff'),
+        url("../resources/fonts/Urbanist-SemiBold.eot") format('eot');
+    font-display: swap;
+}
