@@ -1,0 +1,67 @@
+.main {
+
+    // .main__history
+
+    &__history {
+        background-color: var(--bgc-brown);
+        padding-bottom: 140px;
+    }
+}
+.history {
+
+    // .history__inner
+
+    &__inner {
+        @include flex-all-sb;
+    }
+
+    // .history__pictures
+
+    &__pictures {
+        @include flex-all-sb;
+    }
+
+    // .history__pictures-column
+    &__column-up {
+        margin-bottom: 32px;
+    }
+    &__pictures-column {
+        margin-right: 32px;
+    img {
+
+    }
+}
+    // .history__pictures-content
+
+    &__pictures-content {
+        height: 635px;
+        background-color: var(--bgc-black);
+        padding: 120px 56px 0px;
+    }
+
+    // .history__content-headline
+
+    &__content-headline {
+        color: var(--color-orange);
+        font-family: var(--font-family-urbanist);
+        padding-bottom: 12px;
+    }
+
+    // .history__content-topic
+
+    &__content-topic {
+        padding-bottom: 36px;
+    }
+
+    // .history__content-text
+
+    &__content-text {
+        p {
+        font-family: var(--font-family-urbanist);
+        opacity: 0.8;
+        font-weight: 500;
+        line-height: 180%; /* 28.8px */
+        text-transform: capitalize; 
+    }
+}
+}

@@ -2,6 +2,9 @@ body {
     font-family: "Righteous", sans-serif;
     color: var(--color-white);
 }
+.body--fixed { 
+    overflow-y: hidden;
+}
 /*=========headlines=========*/
 h6 {
     font-size: 14px;
@@ -35,12 +38,27 @@ h6 {
     }
 /*=========container=========*/
 .container {
-    max-width: var(--container-width);
+    max-width: 1200px;
+    padding: 0 15px;
     margin: 0 auto;
     height: 100%;
 }
 .container__top {
-    max-width: var(--container-top-width);
+    max-width: 1500px;
+    padding: 0 15px;
     margin: 0 auto;
     height: 100%;
+}
+.button {
+    display: inline-flex;
+        white-space: nowrap;
+        background-color: var(--color-orange);
+        font-family: var(--font-family-inter);
+        font-weight: 700; 
+        text-transform: uppercase;
+        padding: 20px 36px;
+        transition: all 0.5s;
+}
+.button:hover {
+    transform: scale(1.05);
 }

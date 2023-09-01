@@ -119,18 +119,9 @@
     // .header__button
 
     &__button {
-        display: inline-flex;
-        white-space: nowrap;
-        background-color: var(--color-orange);
-        font-family: var(--font-family-inter);
-        font-weight: 700; 
-        text-transform: uppercase;
         padding: 24px 40px;
-        transition: all 0.5s;
     }
-    &__button:hover {
-        transform: scale(1.05);
-    }
+    
 
     // .header__body-play
 
@@ -138,6 +129,47 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        }
+
+    // .modal
+
+    &__body-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000c1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+        }
+    &__body-modal--open {
+    opacity: 1;
+    visibility: visible;
+    }
+    &__body-modal-window {
+        position: relative;
+        width: 20vw;
+        min-height: 20vh;
+        padding: 50px 20px 20px 20px;
+        background-color: #fff;
+        border-radius: 12px;        
+        }
+    &__modal-close-btn {
+        font-family: sans-serif;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: 700;
+        background-color: white;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;        
         }
 
     //header__play-border
@@ -165,6 +197,7 @@
         font-family: var(--font-family-inter);
         text-transform: uppercase;
         transition: all .3s; 
+        white-space: nowrap;
     }
     &__play-text:hover {
         color: var(--color-orange);
