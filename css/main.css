@@ -162,7 +162,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(../../img/bg-herosection.jpg) 100% 100%/cover no-repeat;
+  background: url(../img/bg-herosection.jpg) 100% 100%/cover no-repeat;
 }
 .header__body-inner {
   display: -webkit-box;
