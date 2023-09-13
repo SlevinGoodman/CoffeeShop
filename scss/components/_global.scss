@@ -50,8 +50,9 @@ h6 {
     height: 100%;
 }
 .button {
-    display: inline-flex;
+        display: inline-flex;
         white-space: nowrap;
+        color: var(--color-white);
         background-color: var(--color-orange);
         font-family: var(--font-family-inter);
         font-weight: 700; 
@@ -61,4 +62,12 @@ h6 {
 }
 .button:hover {
     transform: scale(1.05);
+}
+.headline {
+    color: var(--color-orange);
+    font-family: var(--font-family-urbanist);
+    padding-bottom: 12px;
+}
+.topic {
+
 }
