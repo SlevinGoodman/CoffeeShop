@@ -408,22 +408,24 @@ h1 {
           justify-content: space-between;
 }
 .product__list-item {
+  cursor: pointer;
   background-color: var(--bgc-dark-blue);
   padding: 48px 48px 40px 48px;
 }
-.product__item-img {
-  margin-bottom: 36px;
-}
-.product__item-content {
-  cursor: pointer;
-}
-.product__item-content:hover .product__item-button {
+.product__list-item:hover .product__item-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.product__item-content:hover .product__item-rating, .product__item-content:hover .product__item-price {
+.product__list-item:hover .product__item-rating, .product__list-item:hover .product__item-price {
   display: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+}
+.product__item-img {
+  margin-bottom: 36px;
 }
 .product__item-rating {
   display: -webkit-box;
@@ -455,7 +457,7 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 .product__price-name {
   padding-right: 4px;
@@ -488,4 +490,66 @@ h1 {
 }
 .product__body-button {
   margin-top: 56px;
+}
+
+.main__merchandise {
+  background-color: var(--bgc-brown);
+  padding-bottom: 140px;
+}
+
+.merchandise__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--bgc-black);
+  padding: 72px 80px 84px 169px;
+}
+.merchandise__image {
+  margin-right: 160px;
+}
+.merchandise__content-topic {
+  margin-bottom: 36px;
+}
+.merchandise__content-text {
+  margin-bottom: 36px;
+  font-family: var(--font-family-urbanist);
+  font-weight: 500;
+  line-height: 180%; /* 28.8px */
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+.merchandise__content-button {
+  padding: 20px 36px;
+}
+
+.main__menu {
+  background-color: var(--bgc-brown);
+  padding-bottom: 140px;
+}
+
+.menu__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px 40px;
+}
+.menu__grid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #32323D;
+}
+.menu__item-img {
+  margin: 24px 20px 24px;
+}
+.menu__item-price {
+  font-family: var(--font-family-urbanist);
+  color: var(--color-orange);
+  margin: 24px 24px 24px auto;
 }
