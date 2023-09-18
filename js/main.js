@@ -47,3 +47,41 @@ $(function () {
 // function pauseVid() {
 //     vid.pause();
 // }
+
+// Инициализируем Swiper
+new Swiper('.swiper-container', {
+    // Стрелки 
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // Нумерация
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        // Кастомный вывод фракции
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' +
+            '/' +
+            '<span class="' + totalClass + '"></span> People';
+        },
+    },
+    // Скролл
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
+    // Автовысота
+    autoHeight: true,
+    // Количество слайдов для показа
+    slidesPerView: 'auto',
+    // Отключение функционала, если слайдов больше, чем нужно
+    //watchOverflow: true,
+    // gap между слайдами
+    spaceBetween: 40,
+    // Количество пролистываемых слайдов
+    slidesPerGroup: 2,
+    // Бесконечный слайдер
+    loop:true, 
+});
+

@@ -53,12 +53,20 @@
     }
     &__list-item:hover .product__item-button {
         display: flex;
+        animation: shows 1.5s;
     }
+    @keyframes shows {
+        from {
+        opacity: 0;
+        }
+        to {
+        opacity: 1;       
+        }
+        
+        }
     &__list-item:hover .product__item-rating,
     &__list-item:hover .product__item-price {
         display: none;
-        transition: all 1s;
-        transition-delay: 3s;
     }
     // .product__item-img
 

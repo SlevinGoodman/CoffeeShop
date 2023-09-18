@@ -1,0 +1,189 @@
+.main {
+    // .main__testimonial
+
+    &__testimonial {
+        background-color: var(--bgc-brown);
+        padding-bottom: 140px;
+    }
+}
+.testimonial {
+    // .testimonial__inner
+
+    &__inner {
+    }
+
+    // .testimonial__header
+
+    &__header {
+        text-align: center;
+        padding-bottom: 56px;
+    }
+
+    // .testimonial__header-headline
+
+    &__header-headline {
+    }
+
+    // .testimonial__header-topic
+
+    &__header-topic {
+    }
+
+    // .testimonial__swiper-container
+
+    &__swiper-container {
+        max-width: 1200px;
+    }
+
+    // .testimonial__swiper-wrapper
+
+    &__swiper-wrapper {
+        width: 100%;
+        display: flex;
+        min-width: 0;
+        position: relative;
+    }
+
+    // .testimonial__swiper-slide
+
+    &__swiper-slide {
+        width: auto;
+        height: 305px;
+        flex-shrink: 0;
+        padding: 40px;
+        background-color: var(--bgc-black);
+    }
+
+    // .testimonial__slide-main
+
+    &__slide-main {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 28px;
+    }
+
+    // .testimonial__slide-image
+
+    &__slide-image {
+        width: 129px;
+        height: 149px;
+        flex-shrink: 0;
+    }
+
+    // .testimonial__slide-text
+
+    &__slide-text {
+        width: 332px;
+        font-family: var(--font-family-urbanist);
+        font-weight: 500;
+        line-height: 180%; /* 28.8px */
+        text-transform: capitalize;
+        opacity: 0.8;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    // .testimonial__slide-bottom
+
+    &__slide-bottom {
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .testimonial__slide-person
+
+    &__slide-person {
+    }
+
+    // .testimonial__person-name
+
+    &__person-name {
+        font-family: var(--font-family-urbanist);
+        font-weight: 500;
+        line-height: 120%; /* 21.6px */
+        padding-bottom: 4px;
+    }
+
+    // .testimonial__person-position
+
+    &__person-position {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: var(--font-family-urbanist);
+        opacity: 0.8;
+    }
+
+    // .testimonial__slide-rating
+
+    &__slide-rating {
+        padding-top: 23px;
+        display: inline-block;
+        vertical-align: bottom;
+        line-height: normal;
+    }
+    &__slide-rating svg {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    // .testimonial__swiper-button-prev
+
+    &__swiper-button-prev {
+        position: relative;
+
+    }
+    &__swiper-button-prev::after {
+
+    }
+
+    // .testimonial__swiper-button-next
+
+    &__swiper-button-next {
+
+
+    }
+    &__swiper-button-next::after {
+
+    }
+
+    // .testimonial__swiper-pagination
+
+    &__swiper-pagination {
+        text-align: left;
+        position: relative;
+        
+    }
+
+    // .testimonial__swiper-scrollbar
+
+    &__swiper-scrollbar {
+    }
+}
+
+.swiper-container {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+    position: relative;
+  
+  width: calc(var(--swiper-navigation-size)/ 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color,var(--swiper-theme-color));
+}
+.swiper-pagination {
+}
+.swiper-scrollbar {
+}
+.swiper-horizontal {
+    position: relative;
+}
