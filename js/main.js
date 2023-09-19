@@ -80,8 +80,10 @@ new Swiper('.swiper-container', {
     // gap между слайдами
     spaceBetween: 40,
     // Количество пролистываемых слайдов
-    slidesPerGroup: 2,
+    slidesPerGroup: 1,
     // Бесконечный слайдер
-    loop:true, 
+    loop:true,
+    // Скорость прокрутки 
+    speed: 500, 
 });
 

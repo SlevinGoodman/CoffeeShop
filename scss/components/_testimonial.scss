@@ -3,13 +3,15 @@
 
     &__testimonial {
         background-color: var(--bgc-brown);
-        padding-bottom: 140px;
+        padding-bottom: 100px;
     }
 }
 .testimonial {
     // .testimonial__inner
 
     &__inner {
+        padding-bottom: 90px;
+        overflow: hidden;
     }
 
     // .testimonial__header
@@ -32,13 +34,13 @@
     // .testimonial__swiper-container
 
     &__swiper-container {
-        max-width: 1200px;
+        box-sizing: border-box;
+        width: 100%;
     }
 
     // .testimonial__swiper-wrapper
 
     &__swiper-wrapper {
-        width: 100%;
         display: flex;
         min-width: 0;
         position: relative;
@@ -126,31 +128,81 @@
     }
 
     // .testimonial__swiper-button-prev
-
-    &__swiper-button-prev {
-        position: relative;
-
+    &__swiper-button-prev::before {
+        content: "";
+        position: absolute;
+        top: -15%;
+        left: -80%;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #121315;;
+        z-index: -1;
+        transition: all .3s;
     }
-    &__swiper-button-prev::after {
-
+    &__swiper-button-prev:hover::before {
+        content: "";
+        position: absolute;
+        top: -15%;
+        left: -80%;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #C99E71;
+        z-index: -1;
+        transition: all .3s;
+    }
+    &__swiper-button-prev svg {
+        transition: all .5s;
+    }
+    &__swiper-button-prev:hover svg {
+        transition: all .5s;
+        fill: #000;
     }
 
     // .testimonial__swiper-button-next
 
-    &__swiper-button-next {
-
-
+    &__swiper-button-next svg {
+        transition: all .5s;
     }
-    &__swiper-button-next::after {
-
+    &__swiper-button-next:hover svg {
+        fill: #000;
     }
+    &__swiper-button-next::before {
+        content: "";
+        position: absolute;
+        top: -15%;
+        left: -80%;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #121315;
+        z-index: -1;
+        transition: all .3s;
+    }
+    &__swiper-button-next:hover::before {
+        content: "";
+        position: absolute;
+        top: -15%;
+        left: -80%;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #C99E71;
+        z-index: -1;
+        transition: all .3s;
+    }
+    
 
     // .testimonial__swiper-pagination
 
     &__swiper-pagination {
+        font-family: var(--font-family-urbanist);
+        color: var(--color-orange);
+        font-size: 20px; 
         text-align: left;
         position: relative;
-        
+
     }
 
     // .testimonial__swiper-scrollbar
@@ -166,24 +218,54 @@
 .swiper-slide {
 }
 .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 1054px);
+    right: 50px;
 }
 .swiper-button-next {
-    position: relative;
-  
-  width: calc(var(--swiper-navigation-size)/ 44 * 27);
-  height: var(--swiper-navigation-size);
-  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
-  z-index: 10;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--swiper-navigation-color,var(--swiper-theme-color));
+    right: var(--swiper-navigation-sides-offset, 10px);
+    left: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset, 110%);
+    right: 23px;
+    width: 20px;
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: var(--swiper-navigation-color, var(--swiper-theme-color));
 }
 .swiper-pagination {
+    max-width: 120px;
+    top: 32px;
 }
 .swiper-scrollbar {
+    background: rgb(255, 255, 255, 0.1);
+}
+.swiper-scrollbar-drag {
+    background: #c99e71;
+}
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    left: var(--swiper-scrollbar-sides-offset, 0%);
+    bottom: var(--swiper-scrollbar-bottom, -60px);
+    top: var(--swiper-scrollbar-top, auto);
+    z-index: 50;
+    height: var(--swiper-scrollbar-size, 4px);
+    width: 120px;
 }
 .swiper-horizontal {
     position: relative;
 }
+.swiper-button-prev::after,
+.swiper-rtl .swiper-button-next::after {
+    content: none;
+}
+.swiper-button-next::after,
+.swiper-rtl .swiper-button-prev::after {
+    content: none;
+}
+
