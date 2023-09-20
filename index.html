@@ -761,15 +761,15 @@
               </div>
               <div class="testimonial__swiper-button-prev swiper-button-prev">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
-                  <path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/>
-                  
+                  <path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z" />
+
                 </svg>
               </div>
               <div class="testimonial__swiper-button-next swiper-button-next">
 
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
-                    <path d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z" />
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fff">
+                  <path d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z" />
+                </svg>
 
               </div>
               <div class="testimonial__swiper-pagination swiper-pagination"></div>
@@ -778,10 +778,42 @@
           </div>
         </div>
       </section>
+      <section class="main__reservation reservation">
+        <div class="container">
+          <div class="reservation__inner">
+            <div class="reservation__map">
+              <div id="map" style="width: 100%; height: 100%;">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7426.944577554306!2d-84.48769030658367!3d33.98411324102549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDU4JzU5LjkiTiA4NMKwMjknMDMuOCJX!5e0!3m2!1sru!2sru!4v1695233228265!5m2!1sru!2sru"
+                  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+            <div class="reservation__content">
+              <div class="reservation__header">
+                <div class="reservation__header-headline headline">
+                  <h5>Reservation</h5>
+                </div>
+                <div class="reservation__header-topic topic">
+                  <h2>Booking a table</h2>
+                </div>
+              </div>
+              <form class="reservation__form" action="">
+                <input type="text" class="reservation__form-input" placeholder="4 person" required>
+                <input type="text" class="reservation__form-input" placeholder="12.25, 2020" required>
+                <input type="text" class="reservation__form-input" placeholder="11:00 AM" required>
+                <button class="reservation__form-button button">BOOK A TABLE</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
   crossorigin="anonymous"></script>

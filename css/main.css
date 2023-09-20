@@ -794,3 +794,57 @@ h1 {
 .swiper-rtl .swiper-button-prev::after {
   content: none;
 }
+
+.main__reservation {
+  padding-bottom: 140px;
+  background-color: var(--bgc-brown);
+}
+
+.reservation__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 652px;
+}
+.reservation__map {
+  width: 50%;
+  height: 100%;
+  -webkit-filter: grayscale(5);
+          filter: grayscale(5);
+}
+.reservation__content {
+  background-color: var(--bgc-black);
+  width: 50%;
+}
+.reservation__header {
+  text-align: center;
+  padding: 72px 0 56px 0;
+}
+.reservation__form {
+  text-align: center;
+  margin: 0 auto;
+}
+.reservation__form-input {
+  background-color: var(--bgc-brown);
+  width: 489px;
+  height: 64px;
+  margin-bottom: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-family-urbanist);
+  font-size: 18px;
+  line-height: 180%; /* 32.4px */
+  padding: 16px 0 16px 20px;
+}
+.reservation__form-input:last-child {
+  margin-bottom: 56px;
+}
+.reservation__form-button {
+  margin-top: 32px;
+  font-family: var(--font-family-inter);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px 36px;
+}
