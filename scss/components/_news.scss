@@ -1,0 +1,125 @@
+.main {
+    // .main__news
+
+    &__news {
+        padding-bottom: 140px;
+        background-color: var(--bgc-brown);
+    }
+}
+.news {
+    // .news__inner
+
+    &__inner {
+    }
+
+    // .news__header
+
+    &__header {
+        text-align: center;
+        padding-bottom: 56px;
+    }
+
+    // .news__header-headline
+
+    &__header-headline {
+    }
+
+    // .news__header-topic
+
+    &__header-topic {
+    }
+
+    // .news__content
+
+    &__content {
+        display: flex;
+        gap: 36px;
+    }
+
+    // .news__content-inner
+
+    &__content-inner {
+        background-color: var(--bgc-black);
+    }
+
+    // .news__inner-image
+
+    &__inner-image {
+    }
+
+    // .news__inner-info
+    &__inner-info {
+        padding: 20px 24px 28px 24px;
+    }
+
+    // .news__inner-creating
+
+    &__inner-creating {
+        display: flex;
+        padding-bottom: 16px;
+        font-family: var(--font-family-urbanist), serif;
+        font-weight: 500;
+        justify-content: space-between;
+    }
+
+    // .news__creating-author
+
+    &__creating-author {
+        color: var(--color-orange);
+    }
+    &__creating-author span {
+        color: var(--color-white);
+        padding-left: 6px;
+    }
+
+    // .news__creating-date
+
+    &__creating-date {
+    }
+
+    // .news__inner-text
+
+    &__inner-text {
+        padding-bottom: 33px;
+        font-weight: 400;
+        line-height: 150%; /* 30px */
+        text-transform: capitalize;
+    }
+
+    // .news__inner-button
+
+    &__inner-button {
+        font-family: var(--font-family-urbanist), serif;
+        display: flex;
+        font-weight: 500; 
+        background-color: var(--bgc-black);
+        color: var(--color-orange);
+        transition: all .3s;
+    }
+    &__inner-button:hover {
+        color: var(--color-white);
+        transition: all .3s;
+    }
+    &__inner-button svg {
+        transition: all .3s;
+    }
+    &__inner-button:hover svg {        
+        transform: scaleX(1.2)
+    }
+    &__inner-button path {
+        transition: all .3s;
+    }
+    &__inner-button:hover path {        
+        stroke: var(--color-white);
+    }
+    // .news__button-desc
+
+    &__button-desc {
+    }
+
+    // .news__button-arrow
+
+    &__button-arrow {
+        padding: 0px 8px;
+    }
+}
