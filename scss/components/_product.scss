@@ -47,13 +47,15 @@
     // .product__list-item
 
     &__list-item {
+        height: 579px; ;
         cursor: pointer;
         background-color: var(--bgc-dark-blue);
         padding: 48px 48px 40px 48px;
     }
+    
     &__list-item:hover .product__item-button {
         display: flex;
-        animation: shows 1.5s;
+        animation: shows 3s;
     }
     @keyframes shows {
         from {
@@ -62,23 +64,39 @@
         to {
         opacity: 1;       
         }
-        
+            
         }
-    &__list-item:hover .product__item-rating,
+    &__list-item:hover .product__item-rating {
+        display: flex;
+        position: absolute;
+        top: 300px;
+        opacity: 0;
+        transition: top 1.5s, opacity .2s;
+    }
     &__list-item:hover .product__item-price {
-        display: none;
+        display: flex;
+        position: absolute;
+        top: 300px;
+        opacity: 0;
+        transition: top 1.5s, opacity .3s;
+    }
+    &__list-item:hover .product__item-desc {
+        position: absolute;
+        top: 380px;
+        
+        transition: top .3s;
     }
     // .product__item-img
 
     &__item-img {
-        margin-bottom: 36px;
+        
     }
 
     // .product__item-content
 
-    //&__item-content {
-        //cursor: pointer;
-    //}
+    &__item-content {
+        position: relative;
+    }
     //&__item-content:hover .product__item-button{
         //display: flex;
     //}
@@ -94,6 +112,12 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 20px;
+        position: absolute;
+        opacity: 1;
+        top: 380px;
+        left: -225px;
+        
+        transition: top .5s, opacity .5s;
     }
 
     // .product__rating-name
@@ -114,7 +138,11 @@
     // .product__item-desc
 
     &__item-desc {
+        position: absolute;
+        top: 419px;
+        left: -255px;
         text-transform: uppercase;
+        transition: top .5s;
     }
 
     // .product__item-price
@@ -124,6 +152,11 @@
         display: flex;
         justify-content: center;
         padding-top: 30px;
+        position: absolute;
+        opacity: 1;
+        top: 439px;
+        left: -222px;
+        transition: top .5s, opacity .5s;
     }
 
     // .product__price-name
@@ -154,7 +187,8 @@
         align-items: center;
         justify-content: center;
         padding: 13px 20px;
-        margin: 36px auto 0;
+        margin: 104px auto 0;
+        
     }
 
     // .product__item-icon>

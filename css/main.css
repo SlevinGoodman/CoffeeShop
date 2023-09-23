@@ -411,6 +411,7 @@ h1 {
           justify-content: space-between;
 }
 .product__list-item {
+  height: 579px;
   cursor: pointer;
   background-color: var(--bgc-dark-blue);
   padding: 48px 48px 40px 48px;
@@ -419,8 +420,8 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation: shows 1.5s;
-          animation: shows 1.5s;
+  -webkit-animation: shows 3s;
+          animation: shows 3s;
 }
 @-webkit-keyframes shows {
   from {
@@ -438,11 +439,34 @@ h1 {
     opacity: 1;
   }
 }
-.product__list-item:hover .product__item-rating, .product__list-item:hover .product__item-price {
-  display: none;
+.product__list-item:hover .product__item-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 300px;
+  opacity: 0;
+  -webkit-transition: top 1.5s, opacity 0.2s;
+  transition: top 1.5s, opacity 0.2s;
 }
-.product__item-img {
-  margin-bottom: 36px;
+.product__list-item:hover .product__item-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 300px;
+  opacity: 0;
+  -webkit-transition: top 1.5s, opacity 0.3s;
+  transition: top 1.5s, opacity 0.3s;
+}
+.product__list-item:hover .product__item-desc {
+  position: absolute;
+  top: 380px;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+.product__item-content {
+  position: relative;
 }
 .product__item-rating {
   display: -webkit-box;
@@ -455,6 +479,12 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 20px;
+  position: absolute;
+  opacity: 1;
+  top: 380px;
+  left: -225px;
+  -webkit-transition: top 0.5s, opacity 0.5s;
+  transition: top 0.5s, opacity 0.5s;
 }
 .product__rating-name {
   font-family: var(--font-family-urbanist);
@@ -464,7 +494,12 @@ h1 {
   margin-right: 7px;
 }
 .product__item-desc {
+  position: absolute;
+  top: 419px;
+  left: -255px;
   text-transform: uppercase;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
 }
 .product__item-price {
   font-family: var(--font-family-urbanist);
@@ -475,6 +510,12 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 30px;
+  position: absolute;
+  opacity: 1;
+  top: 439px;
+  left: -222px;
+  -webkit-transition: top 0.5s, opacity 0.5s;
+  transition: top 0.5s, opacity 0.5s;
 }
 .product__price-name {
   padding-right: 4px;
@@ -496,7 +537,7 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 13px 20px;
-  margin: 36px auto 0;
+  margin: 104px auto 0;
 }
 .product__item-icon {
   margin-right: 12px;
