@@ -1,13 +1,14 @@
 const btn = document.querySelector(".header__body-play");
 const modal = document.querySelector(".header__body-modal");
 const body = document.body;
-
-
+const iframe = document.querySelector("iframe");
+const iframeSrc = iframe.src;
 
 const closeModal = () => {
   modal.classList.remove("header__body-modal--open");
   body.classList.remove("body--fixed");
-  iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', "*");
+  //iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', "*");
+  iframe.src = iframeSrc;
 };
 const openModal = () => {
   modal.classList.add("header__body-modal--open");
@@ -48,11 +49,11 @@ $(function () {
 
 
 // попытки остановить воспроизведение в модальном окне при закрытии
-$(document).on('click', '#close_vid', function() {
-    jQuery("iframe").each(function() {
-      jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
-    });
-  });
+//$(document).on('click', '#close_vid', function() {
+    //jQuery("iframe").each(function() {
+     // jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+    //});
+  //});
 
 
 
