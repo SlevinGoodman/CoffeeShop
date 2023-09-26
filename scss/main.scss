@@ -2,6 +2,7 @@
 @import "./mixins/fonts";
 @import "vars";
 @import "mixins/flex";
+@import "mixins/breakpoint";
 // подключения компонентов страницы
 @import "./components/global";
 @import "./components/header";

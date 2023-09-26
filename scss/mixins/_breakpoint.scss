@@ -1,31 +1,42 @@
-/* stylelint-disable */
-
+//////// my breakpoints //////////////////////
+@mixin for-big-desktop {
+  @media (min-width: (1801px)) {
+    @content;
+  }
+}
 @mixin for-desktop {
-  @media (min-width: (1025px)) {
+  @media (max-width: (1800px)) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape {
+  @media (max-width: (1280px)) {
+    @content;
+  }
+}
+@mixin for-tablet-portait {
+  @media (max-width: (900px)) {
+    @content;
+  }
+}
+@mixin for-phone-main {
+  @media (max-width: (600px)) {
+    @content;
+  }
+}
+@mixin for-phone-small {
+  @media (max-width: (320px)) {
+    @content;
+  }
+}
+@mixin for-fold {
+  @media (max-width: (280px)) {
     @content;
   }
 }
 
-@mixin big-desktop {
-  @media (max-width: (1440px)) {
-    @content;
-  }
-}
 
-@mixin tablet {
-  @media (max-width: (1024px)) {
-    @content;
-  }
-}
 
-@mixin small-tablet {
-  @media (max-width: (768px)) {
-    @content;
-  }
-}
 
-@mixin mobile {
-  @media (max-width: (576px)) {
-    @content;
-  }
-}
+
+

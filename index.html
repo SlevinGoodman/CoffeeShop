@@ -17,8 +17,12 @@
 
 <body class="body">
   <div class="wrapper">
+    <div class="overlay overlay--show"></div>
     <header class="header">
-      <div class="header__top">
+      <button  class="burger burger--cross">
+        <span></span>       
+      </button>
+      <div id="home" class="header__top header__top--open">
         <div class="container__top">
           <div class="header__top-inner">
             <nav class="header__nav-left">
@@ -37,7 +41,7 @@
                 </li>
               </ul>
             </nav>
-            <a class="header__logo logo" href="#home">
+            <a href="#home" class="header__logo logo" href="#home">
               <img src="img/logo.svg" alt="logo" />
             </a>
             <nav class="header__nav-right">
@@ -116,7 +120,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="main__stories stories">
+      <section id="about" class="main__stories stories">
         <div class="container">
           <div class="stories__inner">
             <div class="stories__inner-item">
@@ -183,7 +187,7 @@
           </div>
         </div>
       </section>
-      <section class="main__product product">
+      <section id="shop" class="main__product product">
         <div class="container">
           <div class="product__inner">
             <div class="product__header">
@@ -353,7 +357,7 @@
             </div>
           </div>
       </section>
-      <section class="main__merchandise merchandise">
+      <section id="pages" class="main__merchandise merchandise">
         <div class="container">
           <div class="merchandise__inner">
             <img class="merchandise__image" src="img/machine.png" alt="Coffee machine">
@@ -373,7 +377,7 @@
           </div>
         </div>
       </section>
-      <section class="main__menu menu">
+      <section id="menu" class="main__menu menu">
         <div class="container">
           <div class="menu__inner">
             <div class="menu__header">
@@ -777,7 +781,7 @@
           </div>
         </div>
       </section>
-      <section class="main__reservation reservation">
+      <section id="reservation" class="main__reservation reservation">
         <div class="container">
           <div class="reservation__inner">
             <div class="reservation__map">
@@ -808,7 +812,7 @@
           </div>
         </div>
       </section>
-      <section class="main__news news">
+      <section id="blog" class="main__news news">
         <div class="container">
           <div class="news__inner">
             <div class="news__header">
@@ -922,7 +926,7 @@
       <div class="footer__top">
         <div class="container">
           <div class="footer__top-inner">
-            <a class="footer__logo logo" href="#home">
+            <a href="#home" class="footer__logo logo" href="#home">
               <img src="img/logo.svg" alt="logo" />
             </a>
             <nav class="footer__nav-left">
