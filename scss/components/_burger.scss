@@ -1,0 +1,87 @@
+.overlay {
+    @include for-tablet-portait {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        background-color: rgba(0, 0, 0, 0.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+        &--show {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+//*=========Burger=========*//
+.burger {
+    display: none;
+
+    @include for-tablet-portait {
+        display: block;
+        top: 20px;
+        right: 15px;
+        position: fixed;
+        z-index: 150;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+    &--follow {
+        top: 20px;
+        right: 15px;
+        background-color: var(--color-white);
+        box-shadow: 3px 5px 15px var(--color-orange);
+    }
+    & span {
+        display: block;
+        width: 32px;
+        height: 4px;
+        border-radius: 3px;
+        background-color: var(--color-orange);
+        margin: 4px 0;
+    }
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 4px;
+        border-radius: 3px;
+        background-color: var(--color-orange);
+        transition: all 0.3s;
+    }
+    &--cross span {
+        //display: none;
+        transform: scale(0);
+        transition: transform 0.5s ease-in-out;
+    }
+    &--cross::before {
+        //rotate: 45deg;
+        //transform: translateY(3px);
+        position: fixed;
+        top: 49px;
+        transform: rotate(-135deg);
+        transition:
+            transform 0.5s ease-in-out,
+            top 0.5s ease-in-out;
+    }
+    &--cross::after {
+        //rotate: -45deg;
+        //transform: translateY(-3px);
+        position: fixed;
+        top: 49px;
+        transform: rotate(135deg);
+        transition:
+            transform 0.5s ease-in-out,
+            top 0.5s ease-in-out;
+    }
+}

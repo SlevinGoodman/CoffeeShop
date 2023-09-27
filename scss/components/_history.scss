@@ -1,48 +1,84 @@
 .main {
-
     // .main__history
 
     &__history {
         background-color: var(--bgc-brown);
         padding-bottom: 140px;
+        @include for-tablet-portait {
+            padding-bottom: 70px;
+        }
     }
 }
 .history {
-
     // .history__inner
 
     &__inner {
         @include flex-all-sb;
+        @include for-tablet-landscape {
+            flex-direction: column-reverse;
+        }
     }
 
     // .history__pictures
 
     &__pictures {
         @include flex-all-sb;
+        @include for-tablet-portait {
+            width: 100%;
+            margin: 0 5px;
+        }
+        @include for-phone-main {
+            flex-direction: column;
+        }
     }
 
     // .history__pictures-column
+
+    &__pictures-column {
+        margin-right: 32px;
+        @include for-tablet-landscape {
+            display: flex;
+            flex-direction: column;
+        }
+        @include for-phone-main {
+            margin-bottom: 32px;
+        }
+    }
+    &__pictures-column img {
+        
+        @include for-tablet-portait {
+            width: 100%;
+            height: 100%;
+        }
+    }
     &__column-up {
         margin-bottom: 32px;
     }
-    &__pictures-column {
-        margin-right: 32px;
-    img {
-
-    }
-}
     // .history__pictures-content
 
     &__pictures-content {
         height: 635px;
         background-color: var(--bgc-black);
         padding: 120px 56px 0px;
+        @include for-tablet-landscape {
+            margin-bottom: 20px;
+            height: 100%;
+            padding: 60px 56px;
+        }
+        @include for-tablet-landscape {
+            padding: 60px 56px;
+        }
+        @include for-phone-main {
+            padding: 40px;
+        }
+        @include for-phone-small {
+            padding: 20px;
+        }
     }
 
     // .history__content-headline
 
     &__content-headline {
-
     }
 
     // .history__content-topic
@@ -55,12 +91,18 @@
 
     &__content-text {
         p {
-        font-family: var(--font-family-urbanist);
-        color: rgba(255, 255, 255, 0.80); 
-        opacity: 0.8;
-        font-weight: 500;
-        line-height: 180%; /* 28.8px */
-        text-transform: capitalize; 
+            font-family: var(--font-family-urbanist);
+            color: rgba(255, 255, 255, 0.8);
+            opacity: 0.8;
+            font-weight: 500;
+            line-height: 180%; /* 28.8px */
+            text-transform: capitalize;
+            @include for-tablet-landscape {
+                font-size: 18px;
+            }
+            @include for-phone-main {
+                font-size: 14px;
+            }
+        }
     }
-}
 }

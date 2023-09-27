@@ -6,6 +6,13 @@
     &__top {
         background-color: var(--bgc-brown);
         padding-bottom: 72px;
+        @include for-tablet-portait {
+            padding-top: 70px;
+            padding-bottom: 20px;
+        }
+        @include for-phone-small {
+            padding-top: 0;
+        }
     }
 
     // .footer__top-inner
@@ -15,6 +22,14 @@
         display: flex;
         font-family: var(--font-family-inter);
         font-size: 18px;
+        position: relative;
+        @include for-tablet-portait {
+            flex-direction: column;
+            height: auto;
+        }
+        @include for-phone-small {
+            
+        }
     }
 
     // .footer__nav-left
@@ -29,6 +44,15 @@
         display: flex;
         padding-right: 40px;
         margin: auto 0;
+        @include for-tablet-portait {
+            flex-direction: column;
+            padding-left: 50px;
+        }
+        @include for-phone-small {
+            padding: 0px;
+            align-items: center;
+            
+        }
     }
 
     // .footer__nav-item
@@ -36,6 +60,12 @@
     &__nav-item {
         padding-right: 48px;
         transition: all 0.3s;
+        @include for-tablet-portait {
+            padding: 5px 0;
+        }
+        @include for-phone-small {
+            margin: 0 auto;
+        }
     }
     &__nav-item path {
         transition: all 0.3s;
@@ -60,6 +90,9 @@
     &__logo {
         transition: all 0.3s;
         margin-right: 36px;
+        @include for-tablet-portait {
+            display: none;
+        }
     }
     &__logo:hover {
         transform: scale(1.1);
@@ -69,22 +102,40 @@
 
     &__nav-right {
         margin: auto 0;
+        
     }
 
     // .footer__nav-right-list
 
     &__nav-right-list {
         display: flex;
+        @include for-tablet-portait {
+            flex-direction: column;
+            padding-left: 50px;
+        }
+        @include for-phone-small {
+            padding-left: 0px;
+        }
     }
     &__form {
         border-radius: 72px;
-        background-color: var(--bgc-black);
-        
+        background-color: var(--bgc-black);        
         display: flex;
         justify-content: space-between;
         margin-left: auto;
         width: 328px;
         height: 72px;
+        @include for-tablet-landscape {
+            position: absolute;
+            top: -110px;
+            left: 0;
+        }
+        @include for-phone-main {
+            width: 100%;
+        }
+        @include for-phone-small {
+            display: none;
+        }
     }
     &__form-input {
         background-color: var(--bgc-black);
@@ -98,6 +149,10 @@
         text-transform: capitalize;
         padding: 21px 28px;
         border-radius: 72px;
+        @include for-phone-main {
+            padding-right: 0;
+            padding-left: 10px;
+        }
     }
     &__form-button {
         background-color: #C99E71;

@@ -12,34 +12,60 @@ body {
 h6 {
     font-size: 14px;
     font-weight: 500;
-    line-height: 180%; /* 25.2px */ 
+    line-height: 180%; /* 25.2px */     
     }
     p {
     font-size: 16px;
     }
     h5 {
     font-size: 18px;
+    @include for-phone-main {
+        font-size: 16px;
+    }
     }
     h4 {
     font-size: 20px;
     font-weight: 500;
+    @include for-phone-main {
+        font-size: 18px;
+    }
     }
     h3 {
     font-size: 24px;
     font-weight: 400;
     line-height: normal; 
+    @include for-phone-main {
+        font-size: 20px;
+    font-weight: 500;
+    }
     }
     h2 {
     font-size: 48px;
     font-weight: 400;
     line-height: 130%; /* 62.4px */ 
+    @include for-phone-main {
+        font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    }
     }
     h1 {
     font-size: 72px;
     font-weight: 400;
     line-height: 130%; /* 93.6px */ 
+    @include for-phone-main {
+        font-size: 48px;
+    font-weight: 400;
+    line-height: 130%; /* 62.4px */ 
     }
-/*=========container=========*/
+    }
+//=========wrapper=========//
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+//=========container=========//
 .container {
     max-width: 1200px;
     padding: 0 15px;

@@ -63,7 +63,16 @@ new Swiper(".swiper-container", {
   // Стрелки
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    // mobile + tablet - 320-990
+    1: {
+      slidesPerView: 1
+    },
+    1280: {
+      slidesPerView: 2
+    }
   },
   // Нумерация
   pagination: {
@@ -101,7 +110,8 @@ new Swiper(".swiper-container", {
   loop: true,
   // Скорость прокрутки
   speed: 500
-});
+}
+);
 
 //==============burger====================//    
 $(window).on('scroll', function () {

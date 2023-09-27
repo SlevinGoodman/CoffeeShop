@@ -5,6 +5,9 @@
     &__product {
         padding-bottom: 140px;
         background-color: var(--bgc-brown);
+        @include for-tablet-portait {
+            padding-bottom: 70px;
+        }
     }
 }
 .product {
@@ -19,6 +22,9 @@
     &__header {
         text-align: center;
         padding-bottom: 104px;
+        @include for-tablet-portait {
+            padding-bottom: 40px;
+        }
     }
 
     // .product__header-headline
@@ -41,7 +47,16 @@
 
     &__list {
         display: flex;
+        gap: 10px;
         justify-content: space-between;
+        @include for-tablet-landscape {
+            flex-direction: column;
+            margin: 0 auto;
+            width: 366px;
+        }
+        @include for-phone-main {
+            width: 240px;
+        }
     }
 
     // .product__list-item
@@ -51,11 +66,19 @@
         cursor: pointer;
         background-color: var(--bgc-dark-blue);
         padding: 48px 48px 40px 48px;
+        @include for-phone-main {
+            padding: 10px;
+            width: 100%;
+            height: 400px;
+        }
     }
     
     &__list-item:hover .product__item-button {
         display: flex;
         animation: shows 3s;
+        @include for-phone-main {
+            
+        }
     }
     @keyframes shows {
         from {
@@ -72,6 +95,9 @@
         top: 300px;
         opacity: 0;
         transition: top 1.5s, opacity .2s;
+        @include for-phone-main {
+            display: none;
+        }
     }
     &__list-item:hover .product__item-price {
         display: flex;
@@ -79,17 +105,26 @@
         top: 300px;
         opacity: 0;
         transition: top 1.5s, opacity .3s;
+        @include for-phone-main {
+            top: 180px;
+        }
     }
     &__list-item:hover .product__item-desc {
         position: absolute;
-        top: 380px;
-        
+        top: 380px;        
         transition: top .3s;
+        @include for-phone-main {
+            top: 260px;
+            
+        }
     }
     // .product__item-img
 
     &__item-img {
-        
+        @include for-phone-main {
+            width: 180px;
+            height: 229px;
+        }
     }
 
     // .product__item-content
@@ -116,8 +151,10 @@
         opacity: 1;
         top: 380px;
         left: -225px;
-        
         transition: top .5s, opacity .5s;
+        @include for-phone-main {
+            display: none;
+        }
     }
 
     // .product__rating-name
@@ -143,6 +180,16 @@
         left: -255px;
         text-transform: uppercase;
         transition: top .5s;
+        @include for-phone-main {
+            top: 320px;
+            left: -175px;
+        }
+    }
+    &__item-desc h3 {
+        
+        @include for-phone-main {
+            font-size: 16px;
+        }
     }
 
     // .product__item-price
@@ -157,6 +204,10 @@
         top: 439px;
         left: -222px;
         transition: top .5s, opacity .5s;
+        @include for-phone-main {
+            top: 239px;
+            left: -170px;
+        }
     }
 
     // .product__price-name
@@ -188,7 +239,9 @@
         justify-content: center;
         padding: 13px 20px;
         margin: 104px auto 0;
-        
+        @include for-phone-main {
+            margin-top: 80px;
+        }
     }
 
     // .product__item-icon>

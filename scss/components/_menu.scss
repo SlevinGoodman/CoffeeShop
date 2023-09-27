@@ -5,6 +5,9 @@
     &__menu {
         background-color: var(--bgc-brown);
         padding-bottom: 140px;
+        @include for-tablet-portait {
+            padding-bottom: 70px;
+        }
     }
 }
 .menu {
@@ -37,6 +40,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 36px 40px;
+        @include for-tablet-portait {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     // .menu__grid-item
@@ -51,11 +57,33 @@
 
     &__item-img {
         margin: 24px 20px 24px;
+        @include for-phone-main {
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+        }
+        @include for-phone-small {
+            display: none;
+        }
     }
 
     // .menu__item-text
 
     &__item-text {
+        @include for-phone-small {
+            margin-left: 15px;
+        }
+    }
+    &__item-text h3 {
+        @include for-tablet-landscape {
+            font-size: 18px;
+        }
+        @include for-tablet-portait {
+            font-size: 24px;
+        }
+        @include for-phone-main{
+            font-size: 18px;
+        }
     }
 
     // .menu__item-price
@@ -64,5 +92,6 @@
         font-family: var(--font-family-urbanist);
         color: var(--color-orange);
         margin: 24px 24px 24px auto;
+        padding-left: 15px;
     }
 }

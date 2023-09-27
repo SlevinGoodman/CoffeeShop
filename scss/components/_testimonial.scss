@@ -3,14 +3,17 @@
 
     &__testimonial {
         background-color: var(--bgc-brown);
-        padding-bottom: 100px;
+        padding-bottom: 110px;
+        @include for-tablet-portait {
+            padding-bottom: 40px;
+        }
     }
 }
 .testimonial {
     // .testimonial__inner
 
     &__inner {
-        padding-bottom: 90px;
+        padding-bottom: 110px;
         overflow: hidden;
     }
 
@@ -36,6 +39,7 @@
     &__swiper-container {
         box-sizing: border-box;
         width: 100%;
+        position: relative;
     }
 
     // .testimonial__swiper-wrapper
@@ -44,6 +48,9 @@
         display: flex;
         min-width: 0;
         position: relative;
+        @include for-tablet-landscape {
+            //margin: 0 100px;
+        }
     }
 
     // .testimonial__swiper-slide
@@ -54,6 +61,16 @@
         flex-shrink: 0;
         padding: 40px;
         background-color: var(--bgc-black);
+        @include for-tablet-landscape {            
+            padding: 40px 150px;
+        }
+        @include for-tablet-portait {            
+            padding: 20px;
+        }
+        @include for-phone-main {
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 
     // .testimonial__slide-main
@@ -62,6 +79,9 @@
         display: flex;
         gap: 24px;
         margin-bottom: 28px;
+        @include for-phone-main {
+            margin-bottom: 0;
+        }
     }
 
     // .testimonial__slide-image
@@ -70,6 +90,15 @@
         width: 129px;
         height: 149px;
         flex-shrink: 0;
+        @include for-phone-main {
+            margin: auto 0;
+            width: 30%;
+            height: 30%;
+            min-width: 100px;
+        }
+        @include for-phone-small {
+            display: none;
+        }
     }
 
     // .testimonial__slide-text
@@ -82,14 +111,41 @@
         text-transform: capitalize;
         opacity: 0.8;
         color: rgba(255, 255, 255, 0.8);
+        @include for-tablet-landscape {
+            padding-left: 50px;
+            width: 100%;
+        }
+        @include for-phone-main {
+            padding-left: 5px;
+        }
     }
-
+    &__slide-text p {
+        
+        @include for-tablet-landscape {
+            font-size: 20px;
+        }
+        @include for-tablet-portait {
+            font-size: 16px;
+        }
+        @include for-phone-main {
+            max-width: 280px;
+            font-size: 14px;
+            line-height: normal;
+        }
+    }
     // .testimonial__slide-bottom
 
     &__slide-bottom {
         height: 46px;
         display: flex;
         justify-content: space-between;
+        @include for-phone-main {
+            text-align: center;
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px; 
+            margin: 0 auto;         
+        }
     }
 
     // .testimonial__slide-person
@@ -121,6 +177,9 @@
         display: inline-block;
         vertical-align: bottom;
         line-height: normal;
+        @include for-phone-main {
+            display: none;
+        }
     }
     &__slide-rating svg {
         white-space: nowrap;
@@ -200,9 +259,11 @@
         font-family: var(--font-family-urbanist);
         color: var(--color-orange);
         font-size: 20px; 
-        text-align: left;
+        //text-align: left;
         position: relative;
-
+@include for-tablet-landscape {
+   
+}
     }
 
     // .testimonial__swiper-scrollbar
@@ -217,33 +278,62 @@
 }
 .swiper-slide {
 }
-.swiper-button-prev {
-    left: var(--swiper-navigation-sides-offset, 1054px);
-    right: 50px;
-}
-.swiper-button-next {
-    right: var(--swiper-navigation-sides-offset, 10px);
-    left: auto;
-}
+
 
 .swiper-button-next,
 .swiper-button-prev {
     position: absolute;
-    top: var(--swiper-navigation-top-offset, 110%);
+    top: var(--swiper-navigation-top-offset, 120%);
     right: 23px;
     width: 20px;
     height: var(--swiper-navigation-size);
     margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
-    align-items: flex-end;
-    justify-content: flex-end;
+    //align-items: flex-end;
+    //justify-content: flex-end;
     color: var(--swiper-navigation-color, var(--swiper-theme-color));
+    @include for-tablet-landscape {
+        right: 50%;
+    }
+    @include for-phone-main {
+        top: var(--swiper-navigation-top-offset, 115%);
+    }
+}
+.swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 1054px);
+    right: 50px;
+    @include for-tablet-landscape {        
+        left: var(--swiper-navigation-sides-offset, 100px);
+        //right: 50%;
+    }
+    @include for-phone-main {
+        left: var(--swiper-navigation-sides-offset, 30px);
+    }
+}
+.swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 50px);
+    //left: auto;
+    @include for-tablet-landscape {
+        right: var(--swiper-navigation-sides-offset, 100px);
+    }
+    @include for-phone-main {
+        right: var(--swiper-navigation-sides-offset, 30px);
+    }
 }
 .swiper-pagination {
     max-width: 120px;
     top: 32px;
+    @include for-tablet-landscape {
+        max-width: none;
+    }
+    @include for-phone-main {
+        display: none;
+    }
 }
 .swiper-scrollbar {
     background: rgb(255, 255, 255, 0.1);
+    @include for-tablet-landscape {
+        
+    }
 }
 .swiper-scrollbar-drag {
     background: #c99e71;
@@ -256,7 +346,11 @@
     z-index: 50;
     height: var(--swiper-scrollbar-size, 4px);
     width: 120px;
+    @include for-tablet-landscape {
+        display: none;
+    }
 }
+
 .swiper-horizontal {
     position: relative;
 }

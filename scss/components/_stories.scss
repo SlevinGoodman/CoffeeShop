@@ -6,6 +6,9 @@
 			padding: 140px 0;
 			text-align: center;
 			background-color: var(--bgc-brown);
+			@include for-tablet-portait {
+				padding: 70px 0;
+			}
 		}
 }
 .stories {
@@ -14,11 +17,26 @@
 
 		&__inner {
 			@include flex-all-sb;
+			@include for-tablet-landscape {
+				gap: 10px;
+			}
+			@include for-tablet-portait {
+				flex-direction: column;
+				
+			}
 		}
 
 		// .stories__inner-item
 
-		&__inner-item {
+		&__inner-item img {
+			@include for-tablet-landscape {
+				max-width: 100%;
+				height: 100%;
+				@include for-tablet-portait {
+					padding-bottom: 20px;
+					
+				}
+			}
 		}
 
 		// .stories__item-topic
@@ -35,11 +53,17 @@
 			color: var(--color-orange);
 			font-size: 24px; 
 			margin-right: 12px;
+			@include for-tablet-portait {
+				
+			}
 		}
 
 		// .stories__topic-text
 
 		&__topic-text {
+			@include for-tablet-portait {
+				
+			}
 		}
 
 		// .stories__item-img
