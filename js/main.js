@@ -132,7 +132,7 @@ $(window).on('scroll', function () {
   }, 0);
   
   $('.burger, .overlay, .header__top a').on('click', function (e) {
-      e.preventDefault()
+      //e.preventDefault() - не работают якорные ссылки
       $('.header__top').toggleClass('header__top--open')
       $('.overlay').toggleClass('overlay--show')
       $('.burger').toggleClass('burger--cross')
